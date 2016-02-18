@@ -1,0 +1,463 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>向量 | 前言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../CG/segment.html" />
+    
+    
+    <link rel="prev" href="../CG/float-point-pitfall.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.2" data-basepath=".." data-revision="Thu Feb 18 2016 14:48:02 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="CG/index.html">
+            
+                
+                    <a href="../CG/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        计算几何
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="CG/float-point-pitfall.html">
+            
+                
+                    <a href="../CG/float-point-pitfall.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        浮点数相关的陷阱
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="CG/vector.html">
+            
+                
+                    <a href="../CG/vector.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        向量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="CG/segment.html">
+            
+                
+                    <a href="../CG/segment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        线段
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="CG/triangle.html">
+            
+                
+                    <a href="../CG/triangle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        三角形
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="CG/polygon.html">
+            
+                
+                    <a href="../CG/polygon.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        多边形
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="CG/convex.html">
+            
+                
+                    <a href="../CG/convex.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        凸包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CG/halfplane.html">
+            
+                
+                    <a href="../CG/halfplane.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        半平面
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="CG/circle.html">
+            
+                
+                    <a href="../CG/circle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        圆
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="CG/3d.html">
+            
+                
+                    <a href="../CG/3d.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        三维计算几何
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >前言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E5%90%91%E9%87%8F">&#x5411;&#x91CF;</h1>
+<h2 id="%E7%AE%80%E4%BB%8B">&#x7B80;&#x4ECB;</h2>
+<p>&#x5411;&#x91CF;&#xFF0C;&#x53C8;&#x79F0;&#x77E2;&#x91CF;&#xFF0C;&#x662F;&#x65E2;&#x6709;&#x5927;&#x5C0F;&#x53C8;&#x6709;&#x65B9;&#x5411;&#x7684;&#x91CF;&#xFF0C;&#x5411;&#x91CF;&#x7684;&#x957F;&#x5EA6;&#x5373;&#x5411;&#x91CF;&#x7684;&#x5927;&#x5C0F;&#x79F0;&#x4E3A;&#x5411;&#x91CF;&#x7684;&#x6A21;&#x3002;&#x5728;&#x8BA1;&#x7B97;&#x51E0;&#x4F55;&#x4E2D;&#xFF0C;&#x4ECE;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>&#x6307;&#x5411;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span>&#x7684;&#x5411;&#x91CF;&#x8BB0;&#x4F5C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{AB}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9667699999999999em;"></span><span class="strut bottom" style="height:0.9667699999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span><span style="top:-0.25233em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x3002;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>&#x7EF4;&#x5411;&#x91CF;&#x53EF;&#x4EE5;&#x7528;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">n</span></span></span></span>&#x4E2A;&#x5B9E;&#x6570;&#x6765;&#x8868;&#x793A;&#x3002;&#x5411;&#x91CF;&#x7684;&#x57FA;&#x672C;&#x8FD0;&#x7B97;&#x5305;&#x62EC;&#x52A0;&#x51CF;&#x6CD5;&#x3001;&#x6570;&#x4E58;&#x3001;&#x70B9;&#x79EF;&#x3001;&#x53C9;&#x79EF;&#x548C;&#x6DF7;&#x5408;&#x79EF;&#x3002;&#x4F7F;&#x7528;&#x5411;&#x91CF;&#x8FD9;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x5411;&#x91CF;&#x8868;&#x793A;&#x70B9;&#x548C;&#x66F4;&#x590D;&#x6742;&#x7684;&#x5404;&#x79CD;&#x56FE;&#x5F62;&#x3002;</p>
+<h2 id="%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h2>
+<p>&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x7528;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x5411;&#x91CF;&#x6765;&#x8868;&#x793A;&#x70B9;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x6709;&#x4E9B;&#x8BA1;&#x7B97;&#x51E0;&#x4F55;&#x76F8;&#x5173;&#x7684;&#x9898;&#x76EE;&#x4E2D;&#xFF0C;&#x5750;&#x6807;&#x662F;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x6574;&#x5F62;&#x50A8;&#x5B58;&#x7684;&#x3002;&#x5728;&#x505A;&#x8FD9;&#x6837;&#x7684;&#x9898;&#x76EE;&#x65F6;&#xFF0C;&#x5750;&#x6807;&#x4E00;&#x5B9A;&#x8981;&#x7528;&#x6574;&#x5F62;&#x53D8;&#x91CF;&#x50A8;&#x5B58;&#xFF0C;&#x5426;&#x5219;&#x7CBE;&#x5EA6;&#x4E0A;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#x3002;&#x5177;&#x4F53;&#x7684;&#x5C06;&#x70B9;&#x7684;&#x5750;&#x6807;&#x7528;&#x6574;&#x5F62;&#x53D8;&#x91CF;&#x50A8;&#x5B58;&#x53EF;&#x4EE5;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E9B;&#x6280;&#x5DE7;&#xFF0C;&#x6BD4;&#x5982;&#x8BA1;&#x7B97;&#x4E2D;&#x8BA1;&#x7B97;&#x5E73;&#x65B9;&#x6216;&#x5C06;&#x5750;&#x6807;&#x6269;&#x5927;&#x4E8C;&#x500D;&#x7B49;&#x65B9;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">// Pt&#x662F;Point&#x7684;&#x7F29;&#x5199;</span>
+<span class="hljs-keyword">struct</span> Pt {
+    <span class="hljs-keyword">double</span> x, y;
+    Pt() { }
+    Pt(<span class="hljs-keyword">double</span> x, <span class="hljs-keyword">double</span> y) : x(x), y(y) { }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">norm</span><span class="hljs-params">(Pt p)</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>(p.x*p.x + p.y*p.y); }
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">(Pt p)</span> </span>{ <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;(%f, %f)&quot;</span>, p.x, p.y); }
+</code></pre>
+<h2 id="%E5%9F%BA%E6%9C%AC%E8%AE%A1%E7%AE%97">&#x57FA;&#x672C;&#x8BA1;&#x7B97;</h2>
+<h3 id="%E5%8A%A0%E5%87%8F%E6%B3%95">&#x52A0;&#x51CF;&#x6CD5;</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#xB1;</mo><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><mo>(</mo><msub><mi>a</mi><mi>x</mi></msub><mo>&#xB1;</mo><msub><mi>b</mi><mi>x</mi></msub><mo separator="true">,</mo><msub><mi>a</mi><mi>y</mi></msub><mo>&#xB1;</mo><msub><mi>b</mi><mi>y</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">\vec{a} \pm \vec{b} = (a_x \pm b_x, a_y \pm b_y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:1.263988em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">&#xB1;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">&#xB1;</span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">&#xB1;</span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span></span></span></span></p>
+<p>&#x5411;&#x91CF;&#x7684;&#x52A0;&#x51CF;&#x6CD5;&#x9075;&#x4ECE;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;&#x6CD5;&#x5219;&#x548C;&#x4E09;&#x89D2;&#x5F62;&#x6CD5;&#x5219;&#x3002;</p>
+<h5 id="%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h5>
+<pre><code class="lang-cpp">Pt <span class="hljs-keyword">operator</span> - (Pt a, Pt b) { <span class="hljs-keyword">return</span> Pt(a.x - b.x, a.y - b.y); }
+Pt <span class="hljs-keyword">operator</span> + (Pt a, Pt b) { <span class="hljs-keyword">return</span> Pt(a.x + b.x, a.y + b.y); }
+</code></pre>
+<h3 id="%E9%95%BF%E5%BA%A6">&#x957F;&#x5EA6;</h3>
+<p>&#x5411;&#x91CF;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><mo>(</mo><msub><mi>a</mi><mi>x</mi></msub><mo separator="true">,</mo><msub><mi>a</mi><mi>y</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">\vec{a}=(a_x, a_y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span></span></span></span>&#x7684;&#x957F;&#x5EA6;&#x662F;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mrow><msubsup><mi>a</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>a</mi><mi>y</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{a_x^2+a_y^2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.16351em;"></span><span class="strut bottom" style="height:1.84002em;vertical-align:-0.67651em;"></span><span class="base textstyle uncramped"><span class="sqrt mord"><span class="sqrt-sign" style="top:0.026489999999999903em;"><span class="style-wrap reset-textstyle textstyle uncramped"><span class="delimsizing size2">&#x221A;</span></span></span><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.247em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span style="top:-0.28900000000000003em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.24700000000000003em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span style="top:-0.2889999999999999em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">2</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span><span style="top:-1.08351em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped sqrt-line"></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x3002;</p>
+<h5 id="%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h5>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">len</span><span class="hljs-params">(Pt p)</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-built_in">sqrt</span>(sqr(p.x)+sqr(p.y)); }
+</code></pre>
+<h3 id="%E6%95%B0%E4%B9%98">&#x6570;&#x4E58;</h3>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><mo>(</mo><mi>a</mi><msub><mi>b</mi><mi>x</mi></msub><mo separator="true">,</mo><mi>a</mi><msub><mi>b</mi><mi>y</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">a\vec{b} = (a b_x, a b_y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:1.263988em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mopen">(</span><span class="mord mathit">a</span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mpunct">,</span><span class="mord mathit">a</span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span></span></span></span>&#x3002;</p>
+<p>&#x5411;&#x91CF;&#x7684;&#x6570;&#x4E58;&#x662F;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x548C;&#x5B9E;&#x6570;&#x7684;&#x8FD0;&#x7B97;&#x3002;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span>&#x5982;&#x679C;&#x662F;&#x96F6;&#xFF0C;&#x90A3;&#x4E48;&#x7ED3;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x96F6;&#x5411;&#x91CF;&#xFF0C;&#x5982;&#x679C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span>&#x662F;&#x4E00;&#x4E2A;&#x8D1F;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x7ED3;&#x679C;&#x5411;&#x91CF;&#x4F1A;&#x6539;&#x53D8;&#x65B9;&#x5411;&#x3002;</p>
+<h5 id="%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h5>
+<pre><code class="lang-cpp">Pt <span class="hljs-keyword">operator</span> * (<span class="hljs-keyword">double</span> A, Pt p) { <span class="hljs-keyword">return</span> Pt(p.x*A, p.y*A); }
+Pt <span class="hljs-keyword">operator</span> * (Pt p, <span class="hljs-keyword">double</span> A) { <span class="hljs-keyword">return</span> Pt(p.x*A, p.y*A); }
+</code></pre>
+<h3 id="%E7%82%B9%E7%A7%AF">&#x70B9;&#x79EF;</h3>
+<p>&#x53C8;&#x79F0;&#x5185;&#x79EF;&#x3002;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x22C5;</mo><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><msub><mi>a</mi><mi>x</mi></msub><msub><mi>b</mi><mi>x</mi></msub><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><msub><mi>b</mi><mi>y</mi></msub><mo>=</mo><mi mathvariant="normal">&#x2223;</mi><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover><mi mathvariant="normal">&#x2223;</mi><mi mathvariant="normal">&#x2223;</mi><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover><mi mathvariant="normal">&#x2223;</mi><mi>cos</mi><mi>&#x3B8;</mi></mrow><annotation encoding="application/x-tex">\vec{a} \cdot \vec{b} = a_xb_x + a_yb_y = |\vec{a}||\vec{b}|\cos\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:1.263988em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">&#x22C5;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">+</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mord mathrm">&#x2223;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord mathrm">&#x2223;</span><span class="mord mathrm">&#x2223;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord mathrm">&#x2223;</span><span class="mop">cos</span><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span></span></span></span>&#xFF0C;&#x5176;&#x4E2D;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3B8;</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">&#x3B8;</span></span></span></span>&#x662F;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.71444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:0.9778799999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x7684;&#x5939;&#x89D2;&#x3002;</p>
+<h4 id="%E5%BA%94%E7%94%A8">&#x5E94;&#x7528;</h4>
+<p>&#x70B9;&#x79EF;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x4E24;&#x5411;&#x91CF;&#x7684;&#x5939;&#x89D2;&#x3002;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>cos</mi><mi>&#x3B2;</mi><mo>=</mo><mfrac><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#x22C5;</mo><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover></mrow><mrow><mi mathvariant="normal">&#x2223;</mi><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover><mi mathvariant="normal">&#x2223;</mi><mi mathvariant="normal">&#x2223;</mi><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover><mi mathvariant="normal">&#x2223;</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\cos\beta = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.078516em;"></span><span class="strut bottom" style="height:1.7480319999999998em;vertical-align:-0.6695159999999999em;"></span><span class="base textstyle uncramped"><span class="mop">cos</span><span class="mord mathit" style="margin-right:0.05278em;">&#x3B2;</span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.4945159999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord scriptstyle cramped"><span class="mord mathrm">&#x2223;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord scriptstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord mathrm">&#x2223;</span><span class="mord mathrm">&#x2223;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord scriptstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord mathrm">&#x2223;</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord scriptstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">&#x22C5;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord scriptstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></p>
+<h5 id="%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h5>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">dot</span><span class="hljs-params">(Pt a, Pt b)</span> </span>{ <span class="hljs-keyword">return</span> a.x * b.x + a.y * b.y; }
+</code></pre>
+<h3 id="%E5%8F%89%E7%A7%AF">&#x53C9;&#x79EF;</h3>
+<p>&#x53C9;&#x79EF;&#x53C8;&#x79F0;&#x5916;&#x79EF;&#x3002;&#x53C9;&#x79EF;&#x8FD0;&#x7B97;&#x5F97;&#x5230;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#xFF0C;&#x5B83;&#x7684;&#x5927;&#x5C0F;&#x662F;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.71444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x548C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:0.9778799999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x6240;&#x6784;&#x6210;&#x7684;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;&#x7684;&#x9762;&#x79EF;&#xFF0C;&#x65B9;&#x5411;&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.71444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x548C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:0.9778799999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x6240;&#x5728;&#x5E73;&#x9762;&#x5782;&#x76F4;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.71444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x3001;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:0.9778799999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#xD7;</mo><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a} \times \vec{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:1.0612099999999998em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">&#xD7;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x6210;&#x53F3;&#x624B;&#x7CFB;&#x3002;</p>
+<p>&#x8BBE;&#x4E24;&#x5411;&#x91CF;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><mo>(</mo><msub><mi>a</mi><mi>x</mi></msub><mo separator="true">,</mo><msub><mi>a</mi><mi>y</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">\vec{a}=(a_x, a_y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span></span></span></span>&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><mo>(</mo><msub><mi>b</mi><mi>x</mi></msub><mo separator="true">,</mo><msub><mi>b</mi><mi>y</mi></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">\vec{b}=(b_x, b_y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:1.263988em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mpunct">,</span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose">)</span></span></span></span>&#xFF0C;&#x5B83;&#x4EEC;&#x5728;&#x4E8C;&#x7EF4;&#x5E73;&#x9762;&#x4E0A;&#x7684;&#x7684;&#x53C9;&#x79EF;&#x4E3A;&#xFF1A;</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#xD7;</mo><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover><mo>=</mo><msub><mi>a</mi><mi>x</mi></msub><msub><mi>b</mi><mi>y</mi></msub><mo>&#x2212;</mo><msub><mi>a</mi><mi>y</mi></msub><msub><mi>b</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">\vec{a} \times \vec{b} = a_xb_y - a_yb_x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:1.263988em;vertical-align:-0.286108em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">&#xD7;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mrel">=</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit">a</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mord"><span class="mord mathit">b</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit">x</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></p>
+<h5 id="%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h5>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">det</span><span class="hljs-params">(Pt a, Pt b)</span> </span>{ <span class="hljs-keyword">return</span> a.x * b.y - a.y * b.x; }
+</code></pre>
+<h4 id="%E6%80%A7%E8%B4%A8%E4%B8%8E%E5%BA%94%E7%94%A8">&#x6027;&#x8D28;&#x4E0E;&#x5E94;&#x7528;</h4>
+<p>&#x53C9;&#x79EF;&#x62E5;&#x6709;&#x4E24;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x6027;&#x8D28;&#x2014;&#x2014;&#x9762;&#x79EF;&#x4E0E;&#x65B9;&#x5411;&#x3002;</p>
+<p>&#x4E24;&#x5411;&#x91CF;&#x53C9;&#x79EF;&#x5F97;&#x5230;&#x65B0;&#x5411;&#x91CF;&#x7684;&#x957F;&#x5EA6;&#x4E3A;&#x8FD9;&#x4E24;&#x4E2A;&#x6240;&#x6784;&#x6210;&#x7684;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;&#x7684;&#x9762;&#x79EF;&#xFF0C;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x6027;&#x8D28;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6C42;&#x4E09;&#x89D2;&#x5F62;&#x7684;&#x9762;&#x79EF;&#x3002;</p>
+<p>&#x4E24;&#x5411;&#x91CF;&#x53C9;&#x79EF;&#x80FD;&#x53CD;&#x6620;&#x51FA;&#x4E24;&#x5411;&#x91CF;&#x65B9;&#x5411;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x679C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover><mo>&#xD7;</mo><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a} \times \vec{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:1.0612099999999998em;vertical-align:-0.08333em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mbin">&#xD7;</span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x7684;&#x7B26;&#x53F7;&#x4E3A;&#x6B63;&#xFF0C;&#x90A3;&#x4E48;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:0.9778799999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x5728;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.71444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x7684;&#x9006;&#x65F6;&#x9488;&#x65B9;&#x5411;&#xFF1B;&#x5982;&#x679C;&#x7B26;&#x53F7;&#x4E3A;&#x8D1F;&#xFF0C;&#x90A3;&#x4E48;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:0.9778799999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x5728;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.71444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x7684;&#x987A;&#x65F6;&#x9488;&#x65B9;&#x5411;&#xFF1B;&#x5982;&#x679C;&#x7ED3;&#x679C;&#x4E3A;&#x96F6;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>a</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{a}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.71444em;"></span><span class="strut bottom" style="height:0.71444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">a</span></span></span><span style="top:0em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>b</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9778799999999999em;"></span><span class="strut bottom" style="height:0.9778799999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">b</span></span></span><span style="top:-0.26343999999999995em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x5171;&#x7EBF;&#x3002;</p>
+<center><img src="images/&#x53C9;&#x79EF;&#x6027;&#x8D28;&#x7684;&#x5E94;&#x7528;.png" style="width:600px;"></center>
+
+<table>
+<thead>
+<tr>
+<th>&#x8BA1;&#x7B97;&#x7ED3;&#x679C;</th>
+<th><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span>&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span>&#x7684;&#x65B9;&#x5411;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2223;</mi><mi>b</mi><mo>&#xD7;</mo><mi>a</mi><mi mathvariant="normal">&#x2223;</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">|b \times a| &gt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2223;</span><span class="mord mathit">b</span><span class="mbin">&#xD7;</span><span class="mord mathit">a</span><span class="mord mathrm">&#x2223;</span><span class="mrel">&gt;</span><span class="mord mathrm">0</span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span>&#x5728;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span>&#x7684;&#x9006;&#x65F6;&#x9488;&#x65B9;&#x5411;</td>
+</tr>
+<tr>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2223;</mi><mi>b</mi><mo>&#xD7;</mo><mi>a</mi><mi mathvariant="normal">&#x2223;</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">|b \times a| = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2223;</span><span class="mord mathit">b</span><span class="mbin">&#xD7;</span><span class="mord mathit">a</span><span class="mord mathrm">&#x2223;</span><span class="mrel">=</span><span class="mord mathrm">0</span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span>&#x4E0E;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span>&#x5171;&#x7EBF;</td>
+</tr>
+<tr>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2223;</mi><mi>b</mi><mo>&#xD7;</mo><mi>a</mi><mi mathvariant="normal">&#x2223;</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">|b \times a| &lt; 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">&#x2223;</span><span class="mord mathit">b</span><span class="mbin">&#xD7;</span><span class="mord mathit">a</span><span class="mord mathrm">&#x2223;</span><span class="mrel">&lt;</span><span class="mord mathrm">0</span></span></span></span></td>
+<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span>&#x5728;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.69444em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">b</span></span></span></span>&#x7684;&#x987A;&#x65F6;&#x9488;&#x65B9;&#x5411;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E6%A8%A1%E6%9D%BF%E4%BB%A3%E7%A0%81">&#x6A21;&#x677F;&#x4EE3;&#x7801;</h2>
+<pre><code class="lang-cpp">Pt <span class="hljs-keyword">operator</span> - (Pt a, Pt b) { <span class="hljs-keyword">return</span> Pt(a.x - b.x, a.y - b.y); }
+Pt <span class="hljs-keyword">operator</span> + (Pt a, Pt b) { <span class="hljs-keyword">return</span> Pt(a.x + b.x, a.y + b.y); }
+Pt <span class="hljs-keyword">operator</span> * (<span class="hljs-keyword">double</span> A, Pt p) { <span class="hljs-keyword">return</span> Pt(p.x*A, p.y*A); }
+Pt <span class="hljs-keyword">operator</span> * (Pt p, <span class="hljs-keyword">double</span> A) { <span class="hljs-keyword">return</span> Pt(p.x*A, p.y*A); }
+Pt <span class="hljs-keyword">operator</span> / (Pt p, <span class="hljs-keyword">double</span> A) { <span class="hljs-keyword">return</span> Pt(p.x/A, p.y/A); }
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../CG/float-point-pitfall.html" class="navigation navigation-prev " aria-label="Previous page: 浮点数相关的陷阱"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../CG/segment.html" class="navigation navigation-next " aria-label="Next page: 线段"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

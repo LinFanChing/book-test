@@ -1,0 +1,547 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>三维计算几何 | 前言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="../CG/circle.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.9" data-basepath=".." data-revision="Thu Feb 18 2016 14:48:02 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="CG/index.html">
+            
+                
+                    <a href="../CG/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        计算几何
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="CG/float-point-pitfall.html">
+            
+                
+                    <a href="../CG/float-point-pitfall.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        浮点数相关的陷阱
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="CG/vector.html">
+            
+                
+                    <a href="../CG/vector.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        向量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="CG/segment.html">
+            
+                
+                    <a href="../CG/segment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        线段
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="CG/triangle.html">
+            
+                
+                    <a href="../CG/triangle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        三角形
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="CG/polygon.html">
+            
+                
+                    <a href="../CG/polygon.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        多边形
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="CG/convex.html">
+            
+                
+                    <a href="../CG/convex.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        凸包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CG/halfplane.html">
+            
+                
+                    <a href="../CG/halfplane.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        半平面
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="CG/circle.html">
+            
+                
+                    <a href="../CG/circle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        圆
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="CG/3d.html">
+            
+                
+                    <a href="../CG/3d.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        三维计算几何
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >前言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E4%B8%89%E7%BB%B4%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95">&#x4E09;&#x7EF4;&#x8BA1;&#x7B97;&#x51E0;&#x4F55;</h1>
+<h2 id="%E4%B8%89%E7%BB%B4%E5%87%B8%E5%8C%85">&#x4E09;&#x7EF4;&#x51F8;&#x5305;</h2>
+<pre><code class="lang-cpp"><span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstdio&gt;</span></span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cstring&gt;</span></span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span></span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iomanip&gt;</span></span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cmath&gt;</span></span>
+<span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;
+
+<span class="hljs-comment">/* Macros */</span>
+<span class="hljs-comment">/******************************************************************************/</span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> nxt(i) ((i+<span class="hljs-number">1</span>)%n)</span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> nxt2(i, x) ((i+<span class="hljs-number">1</span>)%((x).size()))</span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> prv(i) ((i+(x).size()-<span class="hljs-number">1</span>)%n)</span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> prv2(i, x) ((i+(x).size()-<span class="hljs-number">1</span>)%((x).size()))</span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> sz(x) (int((x).size()))</span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> setpre(x) do{cout&lt;&lt;setprecision(x)&lt;&lt;setiosflags(ios::fixed);}while(<span class="hljs-number">0</span>)</span>
+
+<span class="hljs-comment">/* Real number tools */</span>
+<span class="hljs-comment">/******************************************************************************/</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-built_in">acos</span>(-<span class="hljs-number">1.0</span>);
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> eps = <span class="hljs-number">1e-8</span>;
+<span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">mysqrt</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>{
+    <span class="hljs-keyword">return</span> x &lt;= <span class="hljs-number">0.0</span> ? <span class="hljs-number">0.0</span> : <span class="hljs-built_in">sqrt</span>(x);
+}
+<span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">sq</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>{
+    <span class="hljs-keyword">return</span> x*x;
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">sgn</span><span class="hljs-params">(<span class="hljs-keyword">double</span> x)</span> </span>{
+    <span class="hljs-keyword">return</span> x &lt; -eps ? -<span class="hljs-number">1</span> : x &gt; eps ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">/* 3d Point */</span>
+<span class="hljs-comment">/******************************************************************************/</span>
+<span class="hljs-keyword">struct</span> Pt3 {
+    <span class="hljs-keyword">double</span> x, y, z;
+    Pt3() { }
+    Pt3(<span class="hljs-keyword">double</span> x, <span class="hljs-keyword">double</span> y, <span class="hljs-keyword">double</span> z) : x(x), y(y), z(z) { }
+};
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">const</span> Pt3 cPt3;
+<span class="hljs-keyword">typedef</span> cPt3 &amp; cPt3r;
+
+Pt3 <span class="hljs-keyword">operator</span> + (cPt3r a, cPt3r b) { <span class="hljs-keyword">return</span> Pt3(a.x+b.x, a.y+b.y, a.z+b.z); }
+Pt3 <span class="hljs-keyword">operator</span> - (cPt3r a, cPt3r b) { <span class="hljs-keyword">return</span> Pt3(a.x-b.x, a.y-b.y, a.z-b.z); }
+Pt3 <span class="hljs-keyword">operator</span> * (cPt3r a, <span class="hljs-keyword">double</span> A) { <span class="hljs-keyword">return</span> Pt3(a.x*A, a.y*A, a.z*A); }
+Pt3 <span class="hljs-keyword">operator</span> * (<span class="hljs-keyword">double</span> A, cPt3r a) { <span class="hljs-keyword">return</span> Pt3(a.x*A, a.y*A, a.z*A); }
+Pt3 <span class="hljs-keyword">operator</span> / (cPt3r a, <span class="hljs-keyword">double</span> A) { <span class="hljs-keyword">return</span> Pt3(a.x/A, a.y/A, a.z/A); }
+<span class="hljs-keyword">bool</span> <span class="hljs-keyword">operator</span> == (cPt3r a, cPt3r b) {
+    <span class="hljs-keyword">return</span> !sgn(a.x-b.x) &amp;&amp; !sgn(a.y-b.y) &amp;&amp; !sgn(a.z-b.z);
+}
+istream&amp; <span class="hljs-keyword">operator</span> &gt;&gt; (istream&amp; sm, Pt3 &amp;pt) {
+    sm &gt;&gt; pt.x &gt;&gt; pt.y &gt;&gt; pt.z; <span class="hljs-keyword">return</span> sm;
+}
+ostream &amp; <span class="hljs-keyword">operator</span> &lt;&lt; (ostream&amp; sm, cPt3r pt) {
+    sm &lt;&lt; <span class="hljs-string">&quot;(&quot;</span> &lt;&lt; pt.x &lt;&lt; <span class="hljs-string">&quot;, &quot;</span> &lt;&lt; pt.y &lt;&lt; <span class="hljs-string">&quot;, &quot;</span> &lt;&lt; pt.z &lt;&lt; <span class="hljs-string">&quot;)&quot;</span>; <span class="hljs-keyword">return</span> sm;
+}
+<span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">len</span><span class="hljs-params">(cPt3r p)</span> </span>{ <span class="hljs-keyword">return</span> mysqrt(sq(p.x) + sq(p.y) + sq(p.z)); }
+<span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">dist</span><span class="hljs-params">(cPt3r a, cPt3r b)</span> </span>{ <span class="hljs-keyword">return</span> len(a-b); }
+<span class="hljs-function">Pt3 <span class="hljs-title">unit</span><span class="hljs-params">(cPt3r p)</span> </span>{ <span class="hljs-keyword">return</span> p / len(p); }
+<span class="hljs-function">Pt3 <span class="hljs-title">det</span><span class="hljs-params">(cPt3r a, cPt3r b)</span> </span>{
+    <span class="hljs-keyword">return</span> Pt3(a.y*b.z-a.z*b.y, a.z*b.x-a.x*b.z, a.x*b.y-a.y*b.x);
+}
+<span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">dot</span><span class="hljs-params">(cPt3r a, cPt3r b)</span> </span>{
+    <span class="hljs-keyword">return</span> a.x*b.x + a.y*b.y + a.z*b.z;
+}
+<span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">mix</span><span class="hljs-params">(cPt3r a, cPt3r b, cPt3r c)</span> </span>{
+    <span class="hljs-keyword">return</span> dot(a, det(b, c));
+}
+<span class="hljs-comment">/* 3d Line &amp; Segment */</span>
+<span class="hljs-comment">/******************************************************************************/</span>
+<span class="hljs-keyword">struct</span> Ln3 {
+    Pt3 a, b;
+    Ln3() { }
+    Ln3(cPt3r a, cPt3r b) : a(a), b(b) { }
+};
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">const</span> Ln3 cLn3;
+<span class="hljs-keyword">typedef</span> cLn3 &amp; cLn3r;
+
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">ptonln</span><span class="hljs-params">(cPt3r a, cPt3r b, cPt3r c)</span> </span>{
+    <span class="hljs-keyword">return</span> sgn(len(det(a-b, b-c))) &lt;= <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">/* 3d Plane */</span>
+<span class="hljs-comment">/******************************************************************************/</span>
+<span class="hljs-keyword">struct</span> Pl {
+    Pt3 a, b, c;
+    Pl() { }
+    Pl(cPt3r a, cPt3r b, cPt3r c) : a(a), b(b), c(c) { }
+};
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">const</span> Pl cPl;
+<span class="hljs-keyword">typedef</span> cPl &amp; cPlr;
+
+<span class="hljs-function">Pt3 <span class="hljs-title">nvec</span><span class="hljs-params">(cPlr pl)</span> </span>{
+    <span class="hljs-keyword">return</span> det(pl.a-pl.b, pl.b-pl.c);
+}
+
+<span class="hljs-comment">/* Solution  */</span>
+<span class="hljs-comment">/******************************************************************************/</span>
+<span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(cPt3r a, cPt3r b)</span> </span>{
+    <span class="hljs-keyword">if</span> (sgn(a.x-b.x)) <span class="hljs-keyword">return</span> sgn(a.x-b.x) &lt; <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span> (sgn(a.y-b.y)) <span class="hljs-keyword">return</span> sgn(a.y-b.y) &lt; <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span> (sgn(a.z-b.z)) <span class="hljs-keyword">return</span> sgn(a.z-b.z) &lt; <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+}
+
+<span class="hljs-keyword">struct</span> Face {
+    <span class="hljs-keyword">int</span> a, b, c;
+    Face() { }
+    Face(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b, <span class="hljs-keyword">int</span> c) : a(a), b(b), c(c) { }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">convex3d</span><span class="hljs-params">(<span class="hljs-built_in">vector</span>&lt;Pt3&gt; &amp;p, <span class="hljs-built_in">vector</span>&lt;Pl&gt; &amp;out)</span> </span>{
+    sort(p.begin(), p.end(), cmp);
+    p.erase(unique(p.begin(), p.end()), p.end());
+    random_shuffle(p.begin(), p.end());
+    <span class="hljs-built_in">vector</span>&lt;Face&gt; face;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &lt; sz(p); ++i) {
+        <span class="hljs-keyword">if</span> (ptonln(p[<span class="hljs-number">0</span>], p[<span class="hljs-number">1</span>], p[i])) <span class="hljs-keyword">continue</span>;
+        swap(p[i], p[<span class="hljs-number">2</span>]);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; sz(p); ++j)
+            <span class="hljs-keyword">if</span> (sgn(mix(p[<span class="hljs-number">1</span>]-p[<span class="hljs-number">0</span>], p[<span class="hljs-number">2</span>]-p[<span class="hljs-number">1</span>], p[j]-p[<span class="hljs-number">0</span>])) != <span class="hljs-number">0</span>) {
+                swap(p[j], p[<span class="hljs-number">3</span>]);
+                face.push_back(Face(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>));
+                face.push_back(Face(<span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>));
+                <span class="hljs-keyword">goto</span> found;
+            }
+    }
+found:
+    <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt; &gt; mark(sz(p), <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;(sz(p), <span class="hljs-number">0</span>));
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> v = <span class="hljs-number">3</span>; v &lt; sz(p); ++v) {
+        <span class="hljs-built_in">vector</span>&lt;Face&gt; tmp;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; sz(face); ++i) {
+            <span class="hljs-keyword">int</span> a = face[i].a, b = face[i].b, c = face[i].c;
+            <span class="hljs-keyword">if</span> (sgn(mix(p[a]-p[v], p[b]-p[v], p[c]-p[v])) &lt; <span class="hljs-number">0</span>) {
+                mark[a][b] = mark[b][a] = v;
+                mark[b][c] = mark[c][b] = v;
+                mark[c][a] = mark[a][c] = v;
+            }<span class="hljs-keyword">else</span>{
+                tmp.push_back(face[i]);
+            }
+        }
+        face = tmp;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; sz(tmp); ++i) {
+            <span class="hljs-keyword">int</span> a = face[i].a, b = face[i].b, c = face[i].c;
+            <span class="hljs-keyword">if</span> (mark[a][b] == v) face.push_back(Face(b, a, v));
+            <span class="hljs-keyword">if</span> (mark[b][c] == v) face.push_back(Face(c, b, v));
+            <span class="hljs-keyword">if</span> (mark[c][a] == v) face.push_back(Face(a, c, v));
+        }
+    }
+    out.clear();
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; sz(face); ++i)
+        out.push_back(Pl(p[face[i].a], p[face[i].b], p[face[i].c]));
+}
+
+<span class="hljs-built_in">vector</span>&lt;Pt3&gt; p;
+<span class="hljs-built_in">vector</span>&lt;Pl&gt; out;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">int</span> n;
+    <span class="hljs-built_in">cin</span> &gt;&gt; n;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; ++i) {
+        Pt3 pt;
+        <span class="hljs-built_in">cin</span> &gt;&gt; pt;
+        p.push_back(pt);
+    }
+    convex3d(p, out);
+    <span class="hljs-keyword">double</span> area = <span class="hljs-number">0.0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; sz(out); ++i)
+        area += len(det(out[i].a-out[i].b, out[i].b-out[i].c));
+    setpre(<span class="hljs-number">3</span>);
+    <span class="hljs-built_in">cout</span> &lt;&lt; area / <span class="hljs-number">2.0</span> &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../CG/circle.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 圆"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

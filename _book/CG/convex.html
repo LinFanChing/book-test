@@ -1,0 +1,464 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>凸包 | 前言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../CG/halfplane.html" />
+    
+    
+    <link rel="prev" href="../CG/polygon.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.6" data-basepath=".." data-revision="Thu Feb 18 2016 14:48:02 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="CG/index.html">
+            
+                
+                    <a href="../CG/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        计算几何
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="CG/float-point-pitfall.html">
+            
+                
+                    <a href="../CG/float-point-pitfall.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        浮点数相关的陷阱
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="CG/vector.html">
+            
+                
+                    <a href="../CG/vector.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        向量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="CG/segment.html">
+            
+                
+                    <a href="../CG/segment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        线段
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="CG/triangle.html">
+            
+                
+                    <a href="../CG/triangle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        三角形
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="CG/polygon.html">
+            
+                
+                    <a href="../CG/polygon.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        多边形
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="CG/convex.html">
+            
+                
+                    <a href="../CG/convex.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        凸包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CG/halfplane.html">
+            
+                
+                    <a href="../CG/halfplane.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        半平面
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="CG/circle.html">
+            
+                
+                    <a href="../CG/circle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        圆
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="CG/3d.html">
+            
+                
+                    <a href="../CG/3d.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        三维计算几何
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >前言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E5%87%B8%E5%8C%85">&#x51F8;&#x5305;</h1>
+<h2 id="%E7%82%B9%E7%9A%84%E6%9C%89%E5%BA%8F%E5%8C%96">&#x70B9;&#x7684;&#x6709;&#x5E8F;&#x5316;</h2>
+<p>&#x51F8;&#x5305;&#x7B97;&#x6CD5;&#x591A;&#x8981;&#x5148;&#x5BF9;&#x70B9;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x70B9;&#x6392;&#x5E8F;&#x7684;&#x4E3B;&#x8981;&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x79CD;&#x2014;&#x2014;&#x6781;&#x89D2;&#x6392;&#x5E8F;&#x548C;&#x6C34;&#x5E73;&#x6392;&#x5E8F;&#x3002;</p>
+<h3 id="%E6%9E%81%E8%A7%92%E6%8E%92%E5%BA%8F">&#x6781;&#x89D2;&#x6392;&#x5E8F;</h3>
+<p>&#x6781;&#x89D2;&#x6392;&#x5E8F;&#x4E00;&#x822C;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x70B9;&#x505A;&#x6781;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x4EE5;&#x8FD9;&#x4E2A;&#x70B9;&#x4E3A;&#x4E2D;&#x5FC3;&#x5EFA;&#x7ACB;&#x6781;&#x5750;&#x6807;&#xFF0C;&#x5C06;&#x8F93;&#x5165;&#x7684;&#x70B9;&#x6309;&#x7167;&#x6781;&#x89D2;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x70B9;&#x7684;&#x6781;&#x89D2;&#x76F8;&#x540C;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x8DDD;&#x79BB;&#x6781;&#x70B9;&#x8F83;&#x8FDC;&#x7684;&#x70B9;&#x6392;&#x5728;&#x524D;&#x9762;&#x3002;</p>
+<h3 id="%E6%B0%B4%E5%B9%B3%E6%8E%92%E5%BA%8F">&#x6C34;&#x5E73;&#x6392;&#x5E8F;</h3>
+<p>&#x6C34;&#x5E73;&#x6392;&#x5E8F;&#x5C06;&#x6240;&#x6709;&#x70B9;&#x6309;&#x7167;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span>&#x5750;&#x6807;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5217;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span>&#x5750;&#x6807;&#x76F8;&#x540C;&#x7684;&#x5219;&#x6309;&#x7167;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span></span></span></span>&#x5750;&#x6807;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#x3002;&#x9009;&#x53D6;&#x6392;&#x5E8F;&#x540E;&#x6700;&#x524D;&#x9762;&#x7684;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">A</span></span></span></span>&#x70B9;&#x548C;&#x6700;&#x540E;&#x9762;&#x7684;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span></span>&#x70B9;&#xFF0C;&#x5C06;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>A</mi><mi>B</mi></mrow><mo>&#x20D7;</mo></mover></mrow><annotation encoding="application/x-tex">\vec{AB}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.9667699999999999em;"></span><span class="strut bottom" style="height:0.9667699999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="mord textstyle cramped"><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.05017em;">B</span></span></span><span style="top:-0.25233em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="accent-body accent-vec"><span>&#x20D7;</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span>&#x53F3;&#x8FB9;&#x7684;&#x70B9;&#x6309;&#x7167;&#x6B21;&#x5E8F;&#x53D6;&#x51FA;&#xFF0C;&#x518D;&#x5C06;&#x5DE6;&#x4FA7;&#x7684;&#x70B9;&#x6309;&#x7167;&#x6B21;&#x5E8F;&#x9006;&#x5E8F;&#x53D6;&#x51FA;&#x540E;&#x8FDE;&#x8D77;&#x6765;&#x5C31;&#x662F;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<h3 id="%E6%AF%94%E8%BE%83">&#x6BD4;&#x8F83;</h3>
+<p>&#x867D;&#x7136;&#x6C34;&#x5E73;&#x6392;&#x5E8F;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x4F46;&#x6C34;&#x5E73;&#x6392;&#x5E8F;&#x56E0;&#x4E3A;&#x4E0D;&#x6D89;&#x53CA;&#x4E09;&#x89D2;&#x51FD;&#x6570;&#x64CD;&#x4F5C;&#xFF0C;&#x7CBE;&#x5EA6;&#x8F83;&#x9AD8;&#xFF0C;&#x5728;&#x6761;&#x4EF6;&#x76F8;&#x540C;&#x65F6;&#xFF0C;&#x6700;&#x597D;&#x9009;&#x62E9;&#x6C34;&#x5E73;&#x6392;&#x5E8F;&#x3002;</p>
+<h2 id="%E5%87%B8%E5%8C%85%E6%B1%82%E6%B3%95">&#x51F8;&#x5305;&#x6C42;&#x6CD5;</h2>
+<h3 id="graham-%E6%89%AB%E6%8F%8F%E6%B3%95">Graham &#x626B;&#x63CF;&#x6CD5;</h3>
+<p>Graham &#x7B97;&#x6CD5;&#x662F;&#x5728;&#x67D0;&#x79CD;&#x610F;&#x4E49;&#x4E0A;&#x6765;&#x8BF4;&#x6C42;&#x89E3;&#x4E8C;&#x7EF4;&#x9759;&#x6001;&#x51F8;&#x5305;&#x7684;&#x4E00;&#x79CD;&#x6700;&#x4F18;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x8FD9;&#x79CD;&#x7B97;&#x6CD5;&#x76EE;&#x524D;&#x88AB;&#x5E7F;&#x6CDB;&#x7684;&#x5E94;&#x7528;&#x4E8E;&#x5BF9;&#x5404;&#x79CD;&#x4EE5;&#x4E8C;&#x7EF4;&#x9759;&#x6001;&#x51F8;&#x5305;&#x4E3A;&#x57FA;&#x7840;&#x7684; ACM &#x9898;&#x76EE;&#x7684;&#x6C42;&#x89E3;&#x3002;Graham &#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5927;&#x7EA6;&#x662F; nlogn&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x6C42;&#x89E3;&#x4E8C;&#x7EF4;&#x5E73;&#x9762;&#x4E0A;&#x51E0;&#x4E07;&#x4E2A;&#x70B9;&#x6784;&#x6210;&#x7684;&#x51F8;&#x5305;&#x65F6;&#xFF0C;&#x6D88;&#x8017;&#x7684;&#x65F6;&#x95F4;&#x76F8;&#x5BF9;&#x8F83;&#x5C11;&#x3002;</p>
+<h4 id="%E7%AE%97%E6%B3%95%E6%8F%8F%E8%BF%B0">&#x7B97;&#x6CD5;&#x63CF;&#x8FF0;</h4>
+<p>&#x8FD9;&#x91CC;&#x63CF;&#x8FF0;&#x7684; Graham &#x7B97;&#x6CD5;&#x662F;&#x7ECF;&#x8FC7;&#x6539;&#x8FDB;&#x540E;&#x7684;&#x7B97;&#x6CD5;&#x800C;&#x4E0D;&#x662F;&#x539F;&#x59CB;&#x7B97;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x6539;&#x8FDB;&#x4E4B;&#x540E;&#x7684;&#x7B97;&#x6CD5;&#x66F4;&#x6613;&#x4E8E;&#x5BF9;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x3002;</p>
+<ol>
+<li>&#x5DF2;&#x77E5;&#x6709; n &#x4E2A;&#x70B9;&#x7684;&#x5E73;&#x9762;&#x70B9;&#x96C6; p&#xFF08;p[0]~p[n-1]&#xFF09;&#xFF0C;&#x627E;&#x5230;&#x4E8C;&#x7EF4;&#x5E73;&#x9762;&#x4E2D;&#x6700;&#x4E0B;&#x6700;&#x5DE6;&#x7684;&#x70B9;&#xFF0C;&#x5373; y &#x5750;&#x6807;&#x6700;&#x5C0F;&#x7684;&#x70B9;&#x3002;&#x82E5;&#x6709;&#x591A;&#x4E2A; y &#x503C;&#x6700;&#x5C0F;&#x7684;&#x70B9;&#xFF0C;&#x53D6;&#x5176;&#x4E2D; x &#x503C;&#x6700;&#x5C0F;&#x7684;&#x70B9;&#x3002;</li>
+<li>&#x4EE5;&#x8FD9;&#x4E2A;&#x6700;&#x4E0B;&#x6700;&#x5DE6;&#x7684;&#x70B9;&#x4F5C;&#x4E3A;&#x57FA;&#x51C6;&#x70B9;&#xFF08;&#x5373; p[0]&#xFF09;&#xFF0C;&#x5BF9;&#x4E8C;&#x7EF4;&#x5E73;&#x9762;&#x4E0A;&#x7684;&#x70B9;&#x8FDB;&#x884C;&#x6781;&#x89D2;&#x6392;&#x5E8F;&#x3002;</li>
+<li>&#x5C06; p[0]&#x3001;p[1]&#x3001;p[2]&#x4E09;&#x4E2A;&#x70B9;&#x538B;&#x5165;&#x6808;&#x4E2D;&#xFF08;&#x6808;&#x7528; st &#x8868;&#x793A;&#xFF0C;top &#x8868;&#x793A;&#x6808;&#x9876;&#x6307;&#x9488;&#x7684;&#x4F4D;&#x7F6E;&#xFF09;&#x3002;&#x5E76;&#x5C06; p[0]&#x7684;&#x503C;&#x8D4B;&#x7ED9; p[n]&#x3002;</li>
+<li>&#x5FAA;&#x73AF;&#x904D;&#x5386;&#x5E73;&#x9762;&#x70B9;&#x96C6; p[3]&#x5230; p[n]&#x3002;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A; p[i]&#xFF08; 3&lt;=i&lt;=n&#xFF09;&#x82E5;&#x5B58;&#x5728; p[i]&#x5728;&#x5411;&#x91CF;st[top-1]st[top]&#x7684;&#x987A;&#x65F6;&#x9488;&#x65B9;&#xFF08;&#x5305;&#x62EC;&#x5171;&#x7EBF;&#xFF09;&#x5411;&#x4E14;&#x6808;&#x9876;&#x5143;&#x7D20;&#x4E0D;&#x591A;&#x4E8E; 2 &#x4E2A;&#x65F6;&#xFF0C;&#x5C06;&#x6808;&#x9876;&#x5143;&#x7D20;&#x51FA;&#x6808;&#xFF0C;&#x76F4;&#x5230; p[i]&#x5728;&#x5411;&#x91CF; st[top-1]st[top]&#x7684;&#x9006;&#x65F6;&#x9488;&#x65B9;&#x5411;&#x6216;&#x6808;&#x4E2D;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x5C0F;&#x4E8E; 3 &#x65F6;&#x5C06; p[i]&#x5165;&#x6808;&#x3002;</li>
+<li>&#x5FAA;&#x73AF;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x6808; st &#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x70B9;&#x6B63;&#x597D;&#x5C31;&#x662F;&#x51F8;&#x5305;&#x7684;&#x6240;&#x6709;&#x9876;&#x70B9;&#xFF0C;&#x4E14;&#x8FD9;&#x4E9B;&#x9876;&#x70B9;&#x4EE5;&#x9006;&#x65F6;&#x9488;&#x7684;&#x987A;&#x5E8F;&#x5B58;&#x50A8;&#x5728;&#x6808;&#x4E2D;&#xFF08;st[0]~st[top-1]&#xFF09;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x7531;&#x4E8E;&#x7B2C;&#x4E09;&#x6B65;&#x4E2D;&#xFF0C;&#x5C06; p[0]&#x7684;&#x503C;&#x8D4B;&#x7ED9;&#x4E86; p[n]&#xFF0C;&#x6B64;&#x65F6;&#x6808;&#x9876;&#x5143;&#x7D20; st[top]&#x548C; st[0]&#x76F8;&#x540C;&#xFF0C;&#x56E0;&#x4E3A;&#x6700;&#x540E;&#x5165;&#x6808;&#x7684;&#x70B9;&#x662F; p[n]&#x3002;</li>
+</ol>
+<p>&#x7531;&#x4E8E; Graham &#x7B97;&#x6CD5;&#x662F;&#x57FA;&#x4E8E;&#x6781;&#x89D2;&#x6392;&#x5E8F;&#x7684;&#xFF0C;&#x5BF9;&#x5E73;&#x9762;&#x4E0A;&#x6240;&#x6709;&#x70B9;&#x6781;&#x89D2;&#x6392;&#x5E8F;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;nlogn&#xFF0C;&#x800C;&#x4E4B;&#x540E;&#x9010;&#x70B9;&#x626B;&#x63CF;&#x7684;&#x8FC7;&#x7A0B;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; n&#xFF0C;&#x56E0;&#x6B64;&#x6574;&#x4E2A; Graham &#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x63A5;&#x8FD1; nlogn&#x3002;</p>
+<h4 id="%E5%AE%9E%E7%8E%B0%E7%BB%86%E8%8A%82%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#x7684;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h4>
+<h5 id="%E6%9E%81%E8%A7%92%E5%A4%A7%E5%B0%8F%E9%97%AE%E9%A2%98">&#x6781;&#x89D2;&#x5927;&#x5C0F;&#x95EE;&#x9898;</h5>
+<p>&#x5B9E;&#x9645;&#x5B9E;&#x73B0; Graham &#x7B97;&#x6CD5;&#x7684;&#x6781;&#x89D2;&#x6392;&#x5E8F;&#x5E76;&#x4E0D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x6309;&#x7167;&#x6781;&#x89D2;&#x5927;&#x5C0F;&#x6392;&#x5E8F;&#xFF0C;&#x56E0;&#x4E3A;&#x8BA1;&#x7B97;&#x673A;&#x5728;&#x8868;&#x793A;&#x548C;&#x8BA1;&#x7B97;&#x6D6E;&#x70B9;&#x6570;&#x65F6;&#x4F1A;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x8BEF;&#x5DEE;&#x3002;&#x4E00;&#x822C;&#x4F1A;&#x5229;&#x7528;&#x53C9;&#x79EF;&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x70B9;&#x7684;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#x6765;&#x5B9E;&#x73B0;&#x6781;&#x89D2;&#x6392;&#x5E8F;&#x7684;&#x529F;&#x80FD;&#x3002;&#x5047;&#x8BBE;&#x4EE5;&#x786E;&#x5B9A;&#x5E73;&#x9762;&#x4E2D;&#x6700;&#x4E0B;&#x6700;&#x5DE6;&#x7684;&#x70B9;&#xFF08;&#x57FA;&#x51C6;&#x70B9;&#xFF09;P&#xFF0C;&#x5E76;&#x5DF2;&#x77E5;&#x5E73;&#x9762;&#x4E0A;&#x5176;&#x5B83;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x70B9; A B&#x3002;&#x82E5;&#x70B9; A &#x5728;&#x5411;&#x91CF; PB &#x7684;&#x9006;&#x65F6;&#x9488;&#x65B9;&#x5411;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x8BA4;&#x4E3A; A &#x7684;&#x6781;&#x89D2;&#x5927;&#x4E8E; B &#x7684;&#x6781;&#x89D2;&#xFF0C;&#x53CD;&#x4E4B; A &#x7684;&#x6781;&#x89D2;&#x5C0F;&#x4E8E; B &#x7684;&#x6781;&#x89D2;&#xFF08;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x5E94;&#x501F;&#x52A9;&#x53C9;&#x79EF;&#xFF09;&#x3002;</p>
+<h5 id="%E6%9E%81%E8%A7%92%E7%9B%B8%E5%90%8C%E7%82%B9%E7%9A%84%E5%A4%84%E7%90%86">&#x6781;&#x89D2;&#x76F8;&#x540C;&#x70B9;&#x7684;&#x5904;&#x7406;</h5>
+<p>&#x5728; Graham &#x7B97;&#x6CD5;&#x4E2D;&#xFF0C;&#x7ECF;&#x5E38;&#x4F1A;&#x51FA;&#x73B0;&#x4E24;&#x4E2A;&#x70B9;&#x6781;&#x89D2;&#x76F8;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x5BF9;&#x4E8E;&#x5177;&#x6709;&#x76F8;&#x540C;&#x6781;&#x89D2;&#x7684;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x70B9; A B&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x628A; A B &#x4E24;&#x70B9;&#x7684;&#x6309;&#x7167;&#x8DDD;&#x79BB;&#x57FA;&#x51C6;&#x70B9;&#x8DDD;&#x79BB;&#x7684;&#x964D;&#x5E8F;&#x6392;&#x5217;&#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x5B8C;&#x5168;&#x91CD;&#x5408;&#x7684;&#x4E24;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x6682;&#x4E0D;&#x505A;&#x5904;&#x7406;&#x3002;</p>
+<h3 id="%E6%A8%A1%E6%9D%BF%E4%BB%A3%E7%A0%81">&#x6A21;&#x677F;&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-cpp">typedef vector&lt;Pt&gt; Convex;
+
+// &#x6392;&#x5E8F;&#x6BD4;&#x8F83;&#x51FD;&#x6570;&#xFF0C;&#x6C34;&#x5E73;&#x5E8F;
+bool comp_less(Pt a, Pt b) {
+    return sgn(a.x-b.x) &lt; 0 || (sgn(a.x-b.x) == 0 &amp;&amp; sgn(a.y-b.y) &lt; 0);
+}
+
+// &#x8FD4;&#x56DE;a&#x4E2D;&#x70B9;&#x8BA1;&#x7B97;&#x51FA;&#x7684;&#x51F8;&#x5305;&#xFF0C;&#x7ED3;&#x679C;&#x5B58;&#x5728;res&#x4E2D;
+void convex_hull(Convex &amp;res, vector&lt;Pt&gt; a) {
+    res.resize(2 * a.size() + 5);
+    sort(a.begin(), a.end(), comp_less);
+    a.erase(unique(a.begin(), a.end()), a.end());
+    int m = 0;
+    for (int i = 0; i &lt; int(a.size()); ++i) {
+        while (m&gt;1 &amp;&amp; sgn(det(res[m-1] - res[m-2], a[i] - res[m-2])) &lt;= 0)
+            --m;
+        res[m++] = a[i];
+    }
+    int k = m;
+    for (int i = int(a.size()) - 2; i &gt;= 0; --i) {
+        while (m&gt;k &amp;&amp; sgn(det(res[m-1] - res[m-2], a[i] - res[m-2])) &lt;= 0)
+            --m;
+        res[m++] = a[i];
+    }
+    res.resize(m);
+    if (a.size() &gt; 1) res.resize(m-1);
+}
+</code></pre>
+<h3 id="jarvis-%E6%AD%A5%E8%BF%9B%E6%B3%95">Jarvis &#x6B65;&#x8FDB;&#x6CD5;</h3>
+<p>Jarvis &#x6B65;&#x8FDB;&#x6CD5;&#x8FD0;&#x7528;&#x4E86;&#x4E00;&#x79CD;&#x79F0;&#x4E3A;&#x6253;&#x5305;&#x7684;&#x6280;&#x672F;&#x6765;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x70B9;&#x96C6; Q &#x7684;&#x51F8;&#x5305;&#x3002;&#x7B97;&#x6CD5;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x95F4;
+&#x4E3A; O(nh)&#xFF0C;&#x5176;&#x4E2D; h &#x4E3A;&#x51F8;&#x5305; CH(Q)&#x7684;&#x9876;&#x70B9;&#x6570;&#x3002; &#x5F53; h &#x4E3A; O(lg(n))&#xFF0C;Jarvis &#x6B65;&#x8FDB;&#x6CD5;&#x5728;&#x6E10;&#x8FDB;&#x610F;&#x4E49;&#x4E0A;
+&#x6BD4; Graham &#x7B97;&#x6CD5;&#x7684;&#x901F;&#x5EA6;&#x5FEB;&#x4E00;&#x70B9;&#x3002;
+&#x4ECE;&#x76F4;&#x89C2;&#x4E0A;&#x770B;&#xFF0C;&#x53EF;&#x4EE5;&#x628A; Jarvis &#x6B65;&#x8FDB;&#x6CD5;&#x76F8;&#x50CF;&#x6210;&#x5728;&#x96C6;&#x5408; Q &#x7684;&#x5916;&#x9762;&#x7D27;&#x7D27;&#x7684;&#x5305;&#x4E86;&#x4E00;&#x5C42;&#x7EB8;&#x3002;&#x5F00;&#x59CB;
+&#x65F6;&#xFF0C;&#x628A;&#x7EB8;&#x7684;&#x672B;&#x7AEF;&#x7C98;&#x5728;&#x96C6;&#x5408;&#x4E2D;&#x6700;&#x4F4E;&#x7684;&#x70B9;&#x4E0A;&#xFF0C;&#x5373;&#x7C98;&#x5728;&#x4E0E; Graham &#x7B97;&#x6CD5;&#x5F00;&#x59CB;&#x65F6;&#x76F8;&#x540C;&#x7684;&#x70B9; p0 &#x4E0A;&#x3002;&#x8BE5;
+&#x70B9;&#x4E3A;&#x51F8;&#x5305;&#x7684;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x3002;&#x628A;&#x7EB8;&#x62C9;&#x5411;&#x53F3;&#x8FB9;&#x4F7F;&#x5176;&#x7EF7;&#x7D27;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x628A;&#x7EB8;&#x62C9;&#x9AD8;&#x4E00;&#x4E9B;&#xFF0C;&#x77E5;&#x9053;&#x78B0;&#x5230;&#x4E00;&#x4E2A;&#x70B9;&#x3002;
+&#x8BE5;&#x70B9;&#x4E5F;&#x5FC5;&#x5B9A;&#x4E3A;&#x51F8;&#x5305;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x3002;&#x4F7F;&#x7EB8;&#x4FDD;&#x6301;&#x7EF7;&#x7D27;&#x72B6;&#x6001;&#xFF0C;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7EE7;&#x7EED;&#x56F4;&#x7ED5;&#x9876;&#x70B9;&#x96C6;&#x5408;&#xFF0C;&#x76F4;
+&#x5230;&#x56DE;&#x5230;&#x539F;&#x59CB;&#x70B9; p0&#x3002;
+&#x66F4;&#x5F62;&#x5F0F;&#x7684;&#x8BF4;&#xFF0C;Jarvis &#x6B65;&#x8FDB;&#x6CD5;&#x6784;&#x9020;&#x4E86; CH(Q)&#x7684;&#x9876;&#x70B9;&#x5E8F;&#x5217; H=(P0,P1,&#x2026;,Ph-1)&#xFF0C;&#x5176;&#x4E2D; P0 &#x4E3A;
+&#x539F;&#x59CB;&#x70B9;&#x3002;&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x4E0B;&#x4E00;&#x4E2A;&#x51F8;&#x5305;&#x9876;&#x70B9; P1 &#x5177;&#x6709;&#x76F8;&#x5BF9;&#x4E0E; P0 &#x7684;&#x6700;&#x5C0F;&#x6781;&#x89D2;&#x3002;&#xFF08;&#x5982;&#x679C;&#x6709;&#x6570;&#x4E2A;&#x8FD9;&#x6837;&#x7684;
+&#x70B9;&#xFF0C;&#x9009;&#x62E9;&#x6700;&#x8FDC;&#x7684;&#x90A3;&#x4E2A;&#x70B9;&#x4F5C;&#x4E3A; P1&#x3002;&#xFF09;&#x7C7B;&#x4F3C;&#x5730;&#xFF0C;P2 &#x5177;&#x6709;&#x76F8;&#x5BF9;&#x4E8E; P1 &#x7684;&#x6700;&#x5C0F;&#x7684;&#x6781;&#x89D2;&#xFF0C;&#x7B49;&#x7B49;&#x3002;&#x5F53;&#x8FBE;
+&#x5230;&#x6700;&#x9AD8;&#x9876;&#x70B9;&#xFF0C;&#x5982; Pk&#xFF08;&#x5982;&#x679C;&#x6709;&#x6570;&#x4E2A;&#x8FD9;&#x6837;&#x7684;&#x70B9;&#xFF0C;&#x9009;&#x62E9;&#x6700;&#x8FDC;&#x7684;&#x90A3;&#x4E2A;&#x70B9;&#xFF09;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x6784;&#x9020;&#x597D;&#x4E86; CH(Q)
+&#x7684;&#x53F3;&#x94FE;&#x4E86;&#xFF0C;&#x4E3A;&#x4E86;&#x6784;&#x9020;&#x5176;&#x5DE6;&#x94FE;&#xFF0C;&#x4ECE; Pk &#x5F00;&#x59CB;&#x9009;&#x53D6;&#x76F8;&#x5BF9;&#x4E8E; Pk &#x5177;&#x6709;&#x6700;&#x5C0F;&#x6781;&#x89D2;&#x7684;&#x70B9;&#x4F5C;&#x4E3A; Pk+1&#xFF0C;&#x8FD9;&#x65F6;
+&#x7684; x &#x8F74;&#x662F;&#x539F; x &#x8F74;&#x7684;&#x53CD;&#x65B9;&#x5411;&#xFF0C;&#x5982;&#x6B64;&#x7EE7;&#x7EED;&#xFF0C;&#x6839;&#x636E;&#x8D1F; x &#x8F74;&#x7684;&#x6781;&#x89D2;&#x9010;&#x6E10;&#x5F62;&#x6210;&#x5DE6;&#x94FE;&#xFF0C;&#x77E5;&#x9053;&#x56DE;&#x5230;&#x539F;&#x59CB;&#x70B9;
+P0&#x3002;</p>
+<h2 id="%E6%97%8B%E8%BD%AC%E5%8D%A1%E5%A3%B3">&#x65CB;&#x8F6C;&#x5361;&#x58F3;</h2>
+<h3 id="%E6%A8%A1%E6%9D%BF%E4%BB%A3%E7%A0%81">&#x6A21;&#x677F;&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x8BA1;&#x7B97;&#x51F8;&#x5305;a&#x7684;&#x76F4;&#x5F84;</span>
+<span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">convex_diameter</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Convex &amp;a, <span class="hljs-keyword">int</span> &amp;first, <span class="hljs-keyword">int</span> &amp;second)</span> </span>{
+    <span class="hljs-keyword">int</span> n = a.size();
+    <span class="hljs-keyword">double</span> ans = <span class="hljs-number">0.0</span>;
+    first = second = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> ans;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, j = <span class="hljs-number">1</span>; i &lt; n; ++i) {
+        <span class="hljs-keyword">while</span> (sgn(det(a[nxt(i)]-a[i], a[j]-a[i]) - det(a[nxt(i)]-a[i], a[nxt(j)]-a[i])) &lt; <span class="hljs-number">0</span>)
+            j = nxt(j);
+        <span class="hljs-keyword">double</span> d = max((a[i]-a[j]).norm(), (a[nxt(i)]-a[nxt(j)]).norm());
+        <span class="hljs-keyword">if</span> (d &gt; ans) ans=d, first=i, second=j;
+    }
+    <span class="hljs-keyword">return</span> ans;
+}
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../CG/polygon.html" class="navigation navigation-prev " aria-label="Previous page: 多边形"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../CG/halfplane.html" class="navigation navigation-next " aria-label="Next page: 半平面"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

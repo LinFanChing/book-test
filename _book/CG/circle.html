@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>圆 | 前言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../CG/3d.html" />
+    
+    
+    <link rel="prev" href="../CG/halfplane.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.8" data-basepath=".." data-revision="Thu Feb 18 2016 14:48:02 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="CG/index.html">
+            
+                
+                    <a href="../CG/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        计算几何
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="CG/float-point-pitfall.html">
+            
+                
+                    <a href="../CG/float-point-pitfall.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        浮点数相关的陷阱
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="CG/vector.html">
+            
+                
+                    <a href="../CG/vector.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        向量
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="CG/segment.html">
+            
+                
+                    <a href="../CG/segment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        线段
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="CG/triangle.html">
+            
+                
+                    <a href="../CG/triangle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        三角形
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="CG/polygon.html">
+            
+                
+                    <a href="../CG/polygon.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        多边形
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="CG/convex.html">
+            
+                
+                    <a href="../CG/convex.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        凸包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="CG/halfplane.html">
+            
+                
+                    <a href="../CG/halfplane.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        半平面
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="CG/circle.html">
+            
+                
+                    <a href="../CG/circle.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        圆
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="CG/3d.html">
+            
+                
+                    <a href="../CG/3d.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        三维计算几何
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >前言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="%E5%9C%86">&#x5706;</h1>
+<h2 id="%E5%9C%86%E4%B8%8E%E7%BA%BF%E6%B1%82%E4%BA%A4">&#x5706;&#x4E0E;&#x7EBF;&#x6C42;&#x4EA4;</h2>
+<p>&#x5C06;&#x7EBF;&#x6BB5;AB&#x5199;&#x6210;&#x53C2;&#x6570;&#x65B9;&#x7A0B;P=A+t(B-A)&#xFF0C;&#x5E26;&#x5165;&#x5706;&#x7684;&#x65B9;&#x7A0B;&#xFF0C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x4E00;&#x5143;&#x4E8C;&#x6B21;&#x65B9;&#x7A0B;&#x3002;&#x89E3;&#x51FA;t&#x5C31;&#x53EF;&#x4EE5;&#x6C42;&#x5F97;&#x7EBF;&#x6BB5;&#x6240;&#x5728;&#x76F4;&#x7EBF;&#x4E0E;&#x5706;&#x7684;&#x4EA4;&#x70B9;&#x3002;&#x5982;&#x679C;0&lt;=t&lt;=1&#x5219;&#x8BF4;&#x660E;&#x70B9;&#x5728;&#x7EBF;&#x6BB5;&#x4E0A;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">circle_cross_line</span><span class="hljs-params">(Pt a, Pt b, Pt o, <span class="hljs-keyword">double</span> r, Pt ret[], <span class="hljs-keyword">int</span> &amp;num)</span> </span>{
+    <span class="hljs-keyword">double</span> ox = o.x, oy = o.y, ax = a.x, ay = a.y, bx = b.x, by = b.y;
+    <span class="hljs-keyword">double</span> dx = bx-ax, dy = by-ay;
+    <span class="hljs-keyword">double</span> A = dx*dx + dy*dy;
+    <span class="hljs-keyword">double</span> B = <span class="hljs-number">2</span>*dx*(ax-ox) + <span class="hljs-number">2</span>*dy*(ay-oy);
+    <span class="hljs-keyword">double</span> C = sqr(ax-ox) + sqr(ay-oy) - sqr(r);
+    <span class="hljs-keyword">double</span> delta = B*B - <span class="hljs-number">4</span>*A*C;
+    num = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span> (sgn(delta) &gt;= <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">double</span> t1 = (-B - Sqrt(delta)) / (<span class="hljs-number">2</span>*A);
+        <span class="hljs-keyword">double</span> t2 = (-B + Sqrt(delta)) / (<span class="hljs-number">2</span>*A);
+        <span class="hljs-keyword">if</span> (sgn(t1-<span class="hljs-number">1</span>) &lt;= <span class="hljs-number">0</span> &amp;&amp; sgn(t1) &gt;= <span class="hljs-number">0</span>)
+            ret[num++] = Pt(ax + t1*dx, ay + t1*dy);
+        <span class="hljs-keyword">if</span> (sgn(t2-<span class="hljs-number">1</span>) &lt;= <span class="hljs-number">0</span> &amp;&amp; sgn(t2) &gt;= <span class="hljs-number">0</span>)
+            ret[num++] = Pt(ax + t2*dx, ay + t2*dy);
+    }
+}
+</code></pre>
+<h2 id="%E5%9C%86%E4%B8%8E%E5%9C%86%E6%B1%82%E4%BA%A4">&#x5706;&#x4E0E;&#x5706;&#x6C42;&#x4EA4;</h2>
+<pre><code class="lang-cpp"><span class="hljs-comment">// &#x8BA1;&#x7B97;&#x5706;a&#x548C;&#x5706;b&#x7684;&#x4EA4;&#x70B9;&#xFF0C;&#x6CE8;&#x610F;&#x8981;&#x5148;&#x5224;&#x65AD;&#x4E24;&#x5706;&#x76F8;&#x4EA4;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">circle_circle_cross</span><span class="hljs-params">(Pt ap, <span class="hljs-keyword">double</span> ar, Pt bp, <span class="hljs-keyword">double</span> br, Pt p[])</span> </span>{
+    <span class="hljs-keyword">double</span> d = (ap - bp).norm();
+    <span class="hljs-keyword">double</span> cost = (ar*ar + d*d - br*br) / (<span class="hljs-number">2</span>*ar*d);
+    <span class="hljs-keyword">double</span> sint = <span class="hljs-built_in">sqrt</span>(<span class="hljs-number">1.0</span> - cost*cost);
+    Pt v = (bp - ap) / (bp - ap).norm() * ar;
+    p[<span class="hljs-number">0</span>] = ap + rotate(v, cost, -sint);
+    p[<span class="hljs-number">1</span>] = ap + rotate(v, cost, sint);
+}
+</code></pre>
+<h2 id="%E5%9C%86%E4%B8%8E%E5%A4%9A%E8%BE%B9%E5%BD%A2%E4%BA%A4">&#x5706;&#x4E0E;&#x591A;&#x8FB9;&#x5F62;&#x4EA4;</h2>
+<h2 id="%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF%E5%B9%B6">&#x5706;&#x7684;&#x9762;&#x79EF;&#x5E76;</h2>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../CG/halfplane.html" class="navigation navigation-prev " aria-label="Previous page: 半平面"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../CG/3d.html" class="navigation navigation-next " aria-label="Next page: 三维计算几何"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
